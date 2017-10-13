@@ -1,2 +1,2 @@
-# tsvetkova_kuzyaeva_course_project
+# Kanban Board
 Virtual realisation of Kanban Board
