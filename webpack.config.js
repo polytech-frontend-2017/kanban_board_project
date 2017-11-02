@@ -1,12 +1,21 @@
 var path = require('path')
 var webpack = require('webpack')
 
+var resolve = (p) => path.resolve(__dirname, p)
+
 module.exports = {
   entry: './src/main.js',
   output: {
     path: path.resolve(__dirname, './dist'),
     publicPath: '/dist/',
     filename: 'build.js'
+  },
+  resolve: {
+    extensions: ['.js', '.vue'],
+    alias: {
+      'vue$': 'vue/dist/vue.esm.js',
+      'public': resolve('./public')
+    }
   },
   module: {
     rules: [
@@ -16,7 +25,6 @@ module.exports = {
         options: {
           loaders: {
           }
-          // other vue-loader options go here
         }
       },
       {
@@ -28,15 +36,19 @@ module.exports = {
         test: /\.(png|jpg|gif|svg)$/,
         loader: 'file-loader',
         options: {
-          name: '[name].[ext]?[hash]'
+          objectAssign: 'Object.assign'
         }
+      },
+      {
+        test: /\.styl$/,
+        loader: ['style-loader', 'css-loader', 'stylus-loader', {
+          loader: 'vuetify-loader',
+          options: {
+            theme: resolve('./src/stylus/theme.styl')
+          }
+        }]
       }
     ]
-  },
-  resolve: {
-    alias: {
-      'vue$': 'vue/dist/vue.esm.js'
-    }
   },
   devServer: {
     historyApiFallback: true,
