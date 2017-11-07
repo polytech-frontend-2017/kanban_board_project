@@ -1,8 +1,6 @@
 var path = require('path')
 var webpack = require('webpack')
 
-var resolve = (p) => path.resolve(__dirname, p)
-
 module.exports = {
   entry: './src/main.js',
   output: {
@@ -14,7 +12,7 @@ module.exports = {
     extensions: ['.js', '.vue'],
     alias: {
       'vue$': 'vue/dist/vue.esm.js',
-      'public': resolve('./public')
+      'public': path.resolve(__dirname, './public')
     }
   },
   module: {
@@ -25,6 +23,7 @@ module.exports = {
         options: {
           loaders: {
           }
+          // other vue-loader options go here
         }
       },
       {
@@ -41,19 +40,13 @@ module.exports = {
       },
       {
         test: /\.styl$/,
-        loader: ['style-loader', 'css-loader', 'stylus-loader', {
-          loader: 'vuetify-loader',
-          options: {
-            theme: resolve('./src/stylus/theme.styl')
-          }
-        }]
+        loader: ['style-loader', 'css-loader', 'stylus-loader']
       }
     ]
   },
   devServer: {
     historyApiFallback: true,
-    noInfo: true,
-    overlay: true
+    noInfo: true
   },
   performance: {
     hints: false

@@ -1,6 +1,6 @@
-# Kanban-board
+# kanban
 
-> Kanban-board
+> A Vue.js project
 
 ## Build Setup
 
