@@ -1,37 +1,11 @@
 import Vue from 'vue'
-import {
-    Vuetify,
-    VApp,
-    VNavigationDrawer,
-    VFooter,
-    VList,
-    VBtn,
-    VIcon,
-    VGrid,
-    VToolbar,
-    transitions,
-    VCard,
-    VTextField
-} from 'vuetify'
 import App from './App.vue'
+import Vuetify from 'vuetify'
+import './stylus/main.styl'
 
-Vue.use(Vuetify, {
-  components: {
-    VApp,
-    VNavigationDrawer,
-    VFooter,
-    VList,
-    VBtn,
-    VIcon,
-    VGrid,
-    VToolbar,
-    transitions,
-    VCard,
-    VTextField
-  }
-})
+Vue.use(Vuetify)
 
 new Vue({
-    el:"#app",
-    render: (h) => h(App)
+  el: '#app',
+  render: h => h(App)
 })

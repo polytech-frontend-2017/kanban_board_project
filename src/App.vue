@@ -1,8 +1,8 @@
 <template>
-<v-app >
+  <v-app>
     <v-toolbar fixed app>
       
-    </v-toolbar> 
+    </v-toolbar>
     <main class = "secondary">
       <v-content>
         <v-container class = "pb-0" grid-list-lg>
@@ -45,12 +45,6 @@
   </v-app>
 </template>
 
-
-
-<script>
-  
-</script>
-
 <style scoped>
     #todo_column {
         
@@ -64,3 +58,13 @@
   @import './stylus/main'
 </style>
 
+
+<script>
+  export default {
+    data () {
+      return {
+        
+      }
+    }
+  }
+</script>
