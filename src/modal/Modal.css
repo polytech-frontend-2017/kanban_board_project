@@ -1,0 +1,8 @@
+#Modal {
+    display: flex;
+    flex-direction: column; /*Компоненты будут располагаться в столбец*/
+    justify-content: space-around;
+    align-items: center;
+    background-color: grey;
+    opacity: 50%;
+}

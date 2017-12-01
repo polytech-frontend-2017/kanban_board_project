@@ -1,0 +1,6 @@
+#bottom {
+    flex-grow: 6;
+    background-color: #22a7d0;
+    width: 100%;
+    color: white;
+}

@@ -1,0 +1,6 @@
+    #board {
+        flex-grow: 25;
+        background-color: #ecf9fd;
+        width: 100%;
+        color: white;
+    }

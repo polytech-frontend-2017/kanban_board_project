@@ -1,0 +1,17 @@
+#header {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: row;  
+    background-color: #22a7d0;
+    width: 100%;
+    color: white;
+  }
+
+.logo {
+    align-items: left;
+    height: 60px;
+  }
+  
+.pr_button {
+
+  }
