@@ -1,6 +1,22 @@
-    #board {
-        flex-grow: 25;
-        background-color: #ecf9fd;
-        width: 100%;
-        color: white;
-    }
+* {
+    box-sizing: border-box;
+}
+html, body, .app {
+    height: 100%;
+    margin: 0 auto;
+    padding: 0;
+}
+.app{
+    white-space: nowrap;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-content: space-between;
+    align-items: center;
+}
+
+#board {
+   flex-grow: 10;
+    background-color: #ecf9fd;
+    width: 100%;
+}

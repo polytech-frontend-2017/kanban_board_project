@@ -1,0 +1,70 @@
+.card_title
+{
+    margin: 2px;
+    width: 360px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-content: space-between;
+    align-items: center;
+    
+}
+.card{width: 365px;
+    margin: 0 auto;
+    margin-top:10px;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+
+}
+.listIn
+{
+
+    width: 390px;
+
+    height: 600px;
+    max-height: 600px;
+    overflow: hidden;
+    background-color: #22a7d0;
+}
+ 
+
+.listIn:hover
+{
+    height: 600px;
+    max-height: 600px;
+    overflow: auto;
+}
+.list
+{
+    vertical-align: top;
+    width: 390px;
+    margin:20px;
+
+}
+[draggable] {
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+    /* Required to make elements draggable in old WebKit */
+    -khtml-user-drag: element;
+    -webkit-user-drag: element;
+  }
+  [draggable=true] {
+    -moz-user-select:none;
+    -khtml-user-drag: element;
+    cursor: move;
+  }
+  .ColumnHeader
+  {
+      text-align: center;
+      color: #ff802a;
+      font-size: 48px;
+  }
+  /*style for scroll*/
+  ::-webkit-scrollbar { width: 15px; height: 3px;}
+  ::-webkit-scrollbar-button {  background-color: none; }
+  ::-webkit-scrollbar-track {  background-color: #999;}
+  ::-webkit-scrollbar-track-piece { background-color: none;}
+  ::-webkit-scrollbar-thumb { height: 50px; background-color: #666; border-radius: 3px;}
+  ::-webkit-scrollbar-corner { background-color: #999;}
+  ::-webkit-resizer { background-color:blanchedalmond;}
