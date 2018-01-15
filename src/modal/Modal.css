@@ -1,8 +1,13 @@
-#Modal {
+.modal {
+    background-color: rgba(0,0,0,0.5);
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
     display: flex;
-    flex-direction: column; /*Компоненты будут располагаться в столбец*/
+    flex-direction: column; 
     justify-content: space-around;
     align-items: center;
-    background-color: grey;
     opacity: 50%;
 }

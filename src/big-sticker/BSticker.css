@@ -1,0 +1,36 @@
+#BigSticker {
+    display: flex;
+    height: 70%;
+    width: 70%;
+    opacity: 1;
+}
+
+#ToDo, #UserList {
+    display: flex;
+    align-self: flex-end;
+    height: 85%;
+    width: 25%;
+    background-color: green;
+}
+
+#ButtonCheckDiv, #ButtonUsersDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-self: center;
+    height: 70%;
+    width: 7%;
+    opacity: 1;
+}
+
+.CurcleButton {
+    height: 45px;
+    width: 45px;
+    margin-top: 2%;
+    border-radius: 100%;
+    border: 0px;
+    background-color: #22a7d0;
+}
+#RemoveSticker {
+    margin-top: 50%;
+}

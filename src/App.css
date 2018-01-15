@@ -4,12 +4,13 @@ html, body, #root, #App {
 }
 
 #App {
-  display: flex; /*Все компоненты внутри приобретают свойство flex, обозначение родительского компонента*/
-  flex-direction: column; /*Компоненты будут располагаться в столбец*/
+  display: flex; 
+  flex-direction: column; 
   justify-content: space-around;
   align-content: stretch;
   align-items: center;
   text-align: left;
+  overflow: hidden;
 }
 
 .App-title {

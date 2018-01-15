@@ -1,0 +1,65 @@
+#MainStickerField {
+    display: flex;
+    flex-direction: column;
+    align-content: stretch;
+    align-items: stretch;
+    height: 85%;
+    width: 50%;
+    background-color: #22a7d0;
+}
+
+#StickerHead {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 15%;
+}
+
+#StickerID {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 20%;
+
+}
+
+#StickerName {
+    align-self: center;
+    height: 40%;
+    width: 70%;
+}
+
+#StickerDiscription {
+    display: flex;
+    flex-direction: column;
+    align-content: stretch;
+    align-items: stretch;
+    height: 70%;
+}
+
+#TArea {
+    flex: 10 1 auto;
+}
+
+#StickerDiscription:last-child {
+    flex: 1 1 auto;
+}
+
+#AddSticker {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 15%;
+}
+
+#Plus, #Close {
+    display: flex;
+    height: 24px;
+    width: 24px;
+    opacity: 1;
+    border: 0px;
+    margin: 0 auto;
+    background: rgba(205, 214, 219, 0.3);
+    outline: none;
+    text-decoration: none;
+}
