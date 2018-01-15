@@ -41,7 +41,9 @@ class BigSticker extends Component {
       <div id = 'BigSticker'>
         <ToDoList/>
         <ButtonCheckDiv/>
-        <MainStickerField/>
+        <MainStickerField
+          onClickClose = {this.props.onClickClose}
+        />
         <ButtonUsersDiv/>
         <UserList/>
       </div>
