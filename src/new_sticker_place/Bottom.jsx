@@ -8,29 +8,29 @@ class NewStickerButton extends Component {
   constructor (props) {
     super(props)
     this.state = {showModal: false}
-    this.handleShow = this.handleShow.bind(this)
-    this.handleHide = this.handleHide.bind(this)
+    this.handleClick = this.handleClick.bind(this)
   }
 
-  handleShow () {
-    this.setState({showModal: true})
+  handleClick () {
+    if (this.state.showModal === true) {
+      this.setState({showModal: false})
+    } else {
+      this.setState({showModal: true})
+    }
   }
 
-  handleHide () {
-    this.setState({showModal: true})
-  }
   render () {
     const modal = this.state.showModal ? (
       <Modal>
         <div className = 'modal'>
-          <BigSticker/>
+          <BigSticker onClickClose={this.handleClick}/>
         </div>
       </Modal>
     ) : null
 
     return (
       <div>
-        <button onClick={ this.handleShow } id="AddStickerButton">
+        <button onClick={ this.handleClick } id="AddStickerButton">
           <img src="./button_img/plus.png" className="AddStickerButton" alt="AddStickerButton"/>
         </button>
         {modal}

@@ -31,7 +31,6 @@ class ButtonUsersDiv extends Component {
         </button>
         <button id = "RemoveSticker" className = 'CurcleButton'>
         <img src="./button_img/rubbish-bin.png" id="RemoveStic" alt="RemoveSticker"/>
-
         </button>
       </div>
     )
@@ -44,7 +43,9 @@ class BigSticker extends Component {
       <div id = 'BigSticker'>
         <ToDoList/>
         <ButtonCheckDiv/>
-        <MainStickerField/>
+        <MainStickerField
+          onClickClose = {this.props.onClickClose}
+        />
         <ButtonUsersDiv/>
         <UserList/>
       </div>
