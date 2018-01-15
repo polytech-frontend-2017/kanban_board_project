@@ -1,9 +1,6 @@
 import React, {Component} from 'react'
 import ReactDOM from 'react-dom'
 import './MainStickerField.css'
-import Modal from '../modal/Modal'
-import BigSticker from '../big-sticker/BSticker'
-
 
 class AddSticker extends Component {
   render () {
@@ -30,20 +27,12 @@ class StickerDiscription extends Component {
 }
 
 class StickerHead extends Component {
-  constructor (props) {
-    super(props)
-    this.handleHide = this.handleHide.bind(this)
-  }
-
-  handleHide () {
-    this.setState({showModal: false})
-  }
   render () {
     return (
       <div id = "StickerHead">
         <div id = "StickerID">ID46</div>
         <input autofocus="autofocus"  type = "text" id = "StickerName"  placeholder="Input a card name"  required />
-        <button id = "Close" onClick = {this.props.onClickClose}>
+        <button id = "Close" >
         <img src="./button_img/unchecked.png" id="close" alt="close"/>
         </button>
       </div>
@@ -54,8 +43,8 @@ class StickerHead extends Component {
 class MainStickerField extends Component {
   render () {
     return (
-      <div id = 'MainStickerField'>
-        <StickerHead onClickClose = {this.props.onClickClose}/>
+      <div id = 'MainStickerField' >
+        <StickerHead/>
         <StickerDiscription/>
         <AddSticker/>
       </div>

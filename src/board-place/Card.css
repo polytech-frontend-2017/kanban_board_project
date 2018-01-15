@@ -41,6 +41,7 @@
 
 }
 [draggable] {
+    
     -khtml-user-select: none;
     -webkit-user-select: none;
     user-select: none;
@@ -49,6 +50,7 @@
     -webkit-user-drag: element;
   }
   [draggable=true] {
+   
     -khtml-user-drag: element;
     cursor: move;
   }
