@@ -10,7 +10,7 @@ class ButtonCheckDiv extends Component {
     return (
       <div id = 'ButtonCheckDiv'>
         <button id = 'GetCheckList' className = 'CurcleButton'>
-          1
+          <img src="./button_img/list.png" id="GetCheckListImg" alt="checkedList"/>
         </button>
       </div>
     )
@@ -22,13 +22,15 @@ class ButtonUsersDiv extends Component {
     return (
       <div id = 'ButtonUsersDiv'>
         <button id = "GetUsersList" className = 'CurcleButton'>
-          2
+        <img src="./button_img/add-user-button.png" id="AddUser" alt="AddUser"/>
+
         </button>
         <button id = "ChangeColour" className = 'CurcleButton'>
-          3
+        <img src="./button_img/paint-bucket.png" id="PaintBucket" alt="PaintBucket"/>
+
         </button>
         <button id = "RemoveSticker" className = 'CurcleButton'>
-          4
+        <img src="./button_img/rubbish-bin.png" id="RemoveStic" alt="RemoveSticker"/>
         </button>
       </div>
     )

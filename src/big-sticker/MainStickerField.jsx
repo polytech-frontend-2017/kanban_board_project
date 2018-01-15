@@ -4,11 +4,15 @@ import './MainStickerField.css'
 import Modal from '../modal/Modal'
 import BigSticker from '../big-sticker/BSticker'
 
+
 class AddSticker extends Component {
   render () {
     return (
       <div id = "AddSticker">
-        <button id = "Plus">+</button>
+        <button id = "Plus">
+        <img src="./button_img/plus.png" id="plus" alt="plus"/>
+
+        </button>
       </div>
     )
   }
@@ -18,8 +22,8 @@ class StickerDiscription extends Component {
   render () {
     return (
       <div id = "StickerDiscription">
-        <textarea id = "TArea" required></textarea>
-        <input type = "date"/>
+        <textarea id = "TArea" placeholder="Text description on this sticker" required></textarea>
+        <input type = "date" id="date"/>
       </div>
     )
   }
@@ -34,13 +38,14 @@ class StickerHead extends Component {
   handleHide () {
     this.setState({showModal: false})
   }
-
   render () {
     return (
       <div id = "StickerHead">
         <div id = "StickerID">ID46</div>
-        <input id = "StickerName" type = "text" autofocus required />
-        <button id = "Close" onClick = {this.props.onClickClose}>X</button>
+        <input autofocus="autofocus"  type = "text" id = "StickerName"  placeholder="Input a card name"  required />
+        <button id = "Close" onClick = {this.props.onClickClose}>
+        <img src="./button_img/unchecked.png" id="close" alt="close"/>
+        </button>
       </div>
     )
   }

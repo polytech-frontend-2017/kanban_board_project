@@ -34,3 +34,44 @@
 #RemoveSticker {
     margin-top: 50%;
 }
+#GetCheckListImg
+{
+    width: 25px;
+    height: 25px;
+}
+#AddUser
+{
+    width: 26px;
+    height: 28px;
+  
+}
+#PaintBucket{
+    width: 27px;
+    height: 27px;
+}
+#RemoveStic
+{
+    width: 26px;
+    height: 23px;
+}
+
+/*shadow style for button*/
+#GetCheckList,
+#GetUsersList,
+#ChangeColour,
+#RemoveSticker
+{
+    border: 0px;
+    box-shadow: 0px 3px 15px #000000,
+    inset 0 0px 0 rgba(0, 0, 0, 0.6),
+    0 5px 0 rgba(0,0,0,.1),
+    inset 0 0 2px rgba(0,0,0,.1);
+    cursor: pointer;
+}
+#GetCheckList:hover,
+#GetUsersList:hover,
+#ChangeColour:hover,
+#RemoveSticker:hover
+{
+background-color:#ff802a;
+}

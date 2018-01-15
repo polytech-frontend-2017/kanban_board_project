@@ -30,7 +30,9 @@ class NewStickerButton extends Component {
 
     return (
       <div>
-        <button onClick={ this.handleClick }>Show modal</button>
+        <button onClick={ this.handleClick } id="AddStickerButton">
+          <img src="./button_img/plus.png" className="AddStickerButton" alt="AddStickerButton"/>
+        </button>
         {modal}
       </div>
     )
