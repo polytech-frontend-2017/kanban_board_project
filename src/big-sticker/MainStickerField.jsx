@@ -11,7 +11,6 @@ class AddSticker extends Component {
       <div id = "AddSticker">
         <button id = "Plus">
         <img src="./button_img/plus.png" id="plus" alt="plus"/>
-
         </button>
       </div>
     )
@@ -42,7 +41,13 @@ class StickerHead extends Component {
     return (
       <div id = "StickerHead">
         <div id = "StickerID">ID46</div>
-        <input autofocus="autofocus"  type = "text" id = "StickerName"  placeholder="Input a card name"  required />
+        <input
+          autofocus="autofocus"
+          type = "text"
+          id = "StickerName"
+          placeholder="Input a card name"
+          required
+        />
         <button id = "Close" onClick = {this.props.onClickClose}>
         <img src="./button_img/unchecked.png" id="close" alt="close"/>
         </button>

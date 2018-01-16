@@ -1,7 +1,10 @@
 import React, { Component } from 'react'
 import ReactDOM from 'react-dom'
-import Modal from '../modal/Modal'
-import BigSticker from '../big-sticker/BSticker'
+import Modal from '../../modal/Modal'
+import BigSticker from '../../big-sticker/BSticker'
+import MiniCard from '../miniCard/miniCard.jsx'
+import ListComponent from '../listComp.jsx'
+import PropTypes from 'prop-types'
 import './Bottom.css'
 
 class NewStickerButton extends Component {
@@ -17,6 +20,10 @@ class NewStickerButton extends Component {
     } else {
       this.setState({showModal: true})
     }
+  }
+
+  addMinSticker () {
+    
   }
 
   render () {
@@ -41,9 +48,15 @@ class NewStickerButton extends Component {
 
 class Bottom extends Component {
   render () {
+    let listComp
+    if (this.props.cards) {
+      listComp = <ListComponent id='userList' cards = {this.props.cards}/>
+    }
+
     return (
       <div id = "bottom">
         <NewStickerButton/>
+        <MiniCard/>
       </div>
     )
   }

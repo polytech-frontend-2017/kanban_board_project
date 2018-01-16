@@ -1,9 +1,3 @@
-#bottom {
-    flex-grow: 6;
-    background-color: #22a7d0;
-    width: 100%;
-    color: white;
-}
 #AddStickerButton
 {
     margin:1%;
@@ -12,8 +6,6 @@
     background-color: #22a7d0;
     border:1px #000000 dashed;
     box-shadow: 0 7px 14px rgba(0,0,0,0.25), 0 5px 5px rgba(0,0,0,0.22);
-
-
 }
 .AddStickerButton{
     width: 30px;
