@@ -45,10 +45,7 @@ class BigSticker extends Component {
         <ButtonCheckDiv/>
         <MainStickerField
           onClickClose = {this.props.onClickClose}
-          onClickPlus = { this.props.onClickPlus}
-          id = {this.props.id}
-          color = {this.props.color}
-          title = {this.props.title}
+          onClickPlus = {this.props.addCard}
         />
         <ButtonUsersDiv/>
         <UserList/>

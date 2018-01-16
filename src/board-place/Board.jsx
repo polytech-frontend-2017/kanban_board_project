@@ -57,26 +57,12 @@ class Board extends Component {
     this.addCard = this.addCard.bind(this)
   }
 
-  addCard () {
-    this.setState({
-      id: this.props.id,
-      title: this.props.title,
-      color: this.props.color
-    })
-    let NewCard = {
-      id: this.state.id,
-      title: this.state.title,
-      color: this.state.color
-    }
-    this.state.cards.push(NewCard)
+  addCard (newTitle) {
+    this.setState({ title: newTitle })
+    console.info(this.setState.title)
   }
 
   render () {
-    let NewCard = {
-      id: this.props.id,
-      title: this.props.title,
-      color: this.props.color
-    }
     return (
       <div id = "board">
         <div id = 'worker-columns'>

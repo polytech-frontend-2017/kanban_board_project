@@ -27,13 +27,10 @@ class NewStickerButton extends Component {
       <Modal>
         <div className = 'modal'>
           <BigSticker
-            onClickClose={this.handleClick}
-            onClickPlus = {this.props.onClickPlus}
-            id = {this.props.id}
-            color = {this.props.color}
-            title = {this.props.title}
+            onClick={this.handleClick}
+            onClickPlus = {this.props.addCard}
           />
-          
+
         </div>
       </Modal>
     ) : null
@@ -67,10 +64,7 @@ class Bottom extends Component {
     return (
       <div id = "bottom">
         <NewStickerButton
-          onClickPlus = {this.props.onClickPlus}
-          id = {this.props.id}
-          color = {this.props.color}
-          title = {this.props.title}
+          // onClickPlus = {this.props.onClickPlus}
         />
         { listComp }
       </div>

@@ -37,7 +37,6 @@ class StickerHead extends Component {
     super(props)
     this.handleHide = this.handleHide.bind(this)
     this.handleChangeTitle = this.handleChangeTitle.bind(this)
-    this.state = { title: '' }
   }
 
   handleHide () {
@@ -45,12 +44,11 @@ class StickerHead extends Component {
   }
 
   handleChangeTitle (event) {
-    this.setState({ title: event.target.value })
+    const title = event.target.value
+    this.props.addCard(title)
   }
 
   render () {
-    let title = this.state.title
-    console.info(title)
     return (
       <div id = "StickerHead" >
         <div id = "StickerID">ID46</div>
@@ -58,10 +56,7 @@ class StickerHead extends Component {
           autofocus="autofocus"
           type = "text"
           id = "StickerName"
-          value={ this.state.value }
-          title = {title}
-          onChange = { this.handleChangeTitle }
-          
+          onChange = {this.handleChangeTitle}
           placeholder="Input a card name"
           required
         />
@@ -82,21 +77,13 @@ class MainStickerField extends Component {
   */
 
   render () {
-    let id = 15
-    let color = 'yellow'
-    
-    console.info(this.state)
-    console.info(this.props)
-
     return (
       <div id = 'MainStickerField'>
-        <StickerHead onClickClose = {this.props.onClickClose} title = {this.props.title}/>
+        <StickerHead
+          onClickClose = {this.props.onClickClose}/>
         <StickerDiscription/>
         <AddSticker
-          onClickPlus = {this.props.onClickPlus}
-          id = {id}
-          color = {color}
-          
+          onClickPlus = {this.props.addCard}
         />
       </div>
     )
