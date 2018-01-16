@@ -23,7 +23,6 @@ Card.PropTypes =
 {
   id: PropTypes.number,
   title: PropTypes.string,
-  description: PropTypes.string,
   color: PropTypes.string
 }
 export default Card

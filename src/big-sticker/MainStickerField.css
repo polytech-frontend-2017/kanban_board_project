@@ -11,7 +11,6 @@
 }
 
 #StickerHead {
-
     display: flex;
     align-items: center;
     justify-content: center;
@@ -22,41 +21,30 @@
 #StickerID {
     font-family: "Roboto", sans-serif;
     color:darkslategray;
-    height:  40%;
+    height:  60%;
     font-size: 20px;
     display: flex;
     flex-direction: row;
     justify-content: center;
-    width: 10%;
+    width: 20%;
     line-height: 1.8em;
-
-    margin: 0 0 15px;
     text-align: center;
     vertical-align: middle;
     background: #fff6cf;
     box-sizing: border-box;
-    -webkit-border-top-left-radius: 6px;
-    -webkit-border-bottom-left-radius: 6px;
-    -moz-border-radius-topleft: 6px;
-    -moz-border-radius-bottomleft: 6px;
     border-top-left-radius: 6px;
     border-bottom-left-radius: 6px;
 }
 
 #StickerName {
     align-self: center;
-    height: 40%;
-    width: 74%;
+    height: 60%;
+    width: 60%;
+    font-size: 20px;
     background: #fff6cf;
     font-family: "Roboto", sans-serif;
     border: 0;
-    margin: 0 0 15px;
-    padding: 15px;
     box-sizing: border-box;
-    -webkit-border-top-right-radius: 6px;
-    -webkit-border-bottom-right-radius: 6px;
-    -moz-border-radius-topright: 6px;
-    -moz-border-radius-bottomright: 6px;
     border-top-right-radius: 6px;
     border-bottom-right-radius: 6px;
 }
@@ -71,8 +59,6 @@
     resize: none; 
     text-align: center;
     vertical-align: middle;
-    -webkit-border-radius: 6px;
-    -moz-border-radius: 6px;
     border-radius: 6px;
 }
 #StickerDiscription {

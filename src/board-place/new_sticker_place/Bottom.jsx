@@ -22,23 +22,33 @@ class NewStickerButton extends Component {
     }
   }
 
-  addMinSticker () {
-    
-  }
-
   render () {
     const modal = this.state.showModal ? (
       <Modal>
         <div className = 'modal'>
-          <BigSticker onClickClose={this.handleClick}/>
+          <BigSticker
+            onClickClose={this.handleClick}
+            onClickPlus = {this.props.onClickPlus}
+            id = {this.props.id}
+            color = {this.props.color}
+            title = {this.props.title}
+          />
+          
         </div>
       </Modal>
     ) : null
 
     return (
       <div>
-        <button onClick={ this.handleClick } id="AddStickerButton">
-          <img src="./button_img/plus.png" className="AddStickerButton" alt="AddStickerButton"/>
+        <button
+          onClick={ this.handleClick }
+          id="AddStickerButton"
+        >
+          <img
+            src="./button_img/plus.png"
+            className="AddStickerButton"
+            alt="AddStickerButton"
+          />
         </button>
         {modal}
       </div>
@@ -49,14 +59,20 @@ class NewStickerButton extends Component {
 class Bottom extends Component {
   render () {
     let listComp
+
     if (this.props.cards) {
       listComp = <ListComponent id='userList' cards = {this.props.cards}/>
     }
 
     return (
       <div id = "bottom">
-        <NewStickerButton/>
-        <MiniCard/>
+        <NewStickerButton
+          onClickPlus = {this.props.onClickPlus}
+          id = {this.props.id}
+          color = {this.props.color}
+          title = {this.props.title}
+        />
+        { listComp }
       </div>
     )
   }
