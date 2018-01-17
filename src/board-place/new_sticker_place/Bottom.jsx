@@ -27,8 +27,8 @@ class NewStickerButton extends Component {
       <Modal>
         <div className = 'modal'>
           <BigSticker
-            onClick={this.handleClick}
-            onClickPlus = {this.props.addCard}
+            onClickClose={this.handleClick}
+            onClickPlus = {this.props.onClickPlus}
           />
 
         </div>
@@ -64,7 +64,7 @@ class Bottom extends Component {
     return (
       <div id = "bottom">
         <NewStickerButton
-          // onClickPlus = {this.props.onClickPlus}
+          onClickPlus = {this.props.onClickPlus}
         />
         { listComp }
       </div>

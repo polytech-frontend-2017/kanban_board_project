@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-//import CSSTransitionGroup from 'react-transition-group/CSSTransitionGroup';
+// import CSSTransitionGroup from 'react-transition-group/CSSTransitionGroup';
 import PropTypes from 'prop-types'
 import { DragSource } from 'react-dnd'
 

@@ -6,12 +6,13 @@ import './Board.css'
 import './Card.css'
 import ListComponent from './listComp.jsx'
 import Bottom from './new_sticker_place/Bottom.jsx'
+import axios from 'axios'
 
 class Board extends Component {
   constructor (props) {
     super(props)
     this.state = {
-      
+
       cards: [
         {
           id: 1,
@@ -47,19 +48,36 @@ class Board extends Component {
           color: '#fefb64'
         }
       ],
-
-      id: '',
-      title: '',
-      status: 'start',
-      color: ''
+      newCard: {
+        id: '',
+        title: '',
+        status: 'start',
+        color: ''
+      }
     }
 
     this.addCard = this.addCard.bind(this)
+    this.apiUrl = 'http://localhost:5000/api/sticker_info'
   }
 
-  addCard (newTitle) {
-    this.setState({ title: newTitle })
-    console.info(this.setState.title)
+  addCard () {
+    // Make HTTP reques with Axios
+    console.info('Плюс работает:')
+    axios.get(this.apiUrl)
+      .then((res) => {
+        // Set state with result
+        console.info('А тут уже блок с карточками читает:')
+        console.info(res.data)
+        this.setState({
+          newCard: {
+            id: '15',
+            title: res.data.title,
+            status: 'start',
+            color: '#ffa5ac'
+          }
+        })
+        this.state.cards.push(this.state.newCard)
+      })
   }
 
   render () {
@@ -84,7 +102,7 @@ class Board extends Component {
         </div>
         <Bottom
           cards={this.state.cards.filter((card) => card.status === 'start')}
-          onClickPlus = {this.addCard}
+          onClickPlus={this.addCard}
         />
       </div>
     )

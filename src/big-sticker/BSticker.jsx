@@ -5,6 +5,7 @@ import ToDoList from './ToDoList'
 import MainStickerField from './MainStickerField'
 import UserList from './UserList'
 
+
 class ButtonCheckDiv extends Component {
   render () {
     return (
@@ -45,7 +46,7 @@ class BigSticker extends Component {
         <ButtonCheckDiv/>
         <MainStickerField
           onClickClose = {this.props.onClickClose}
-          onClickPlus = {this.props.addCard}
+          onClickPlus = {this.props.onClickPlus}
         />
         <ButtonUsersDiv/>
         <UserList/>

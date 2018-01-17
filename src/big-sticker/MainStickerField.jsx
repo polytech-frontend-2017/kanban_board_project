@@ -3,12 +3,13 @@ import ReactDOM from 'react-dom'
 import './MainStickerField.css'
 import Modal from '../modal/Modal'
 import BigSticker from '../big-sticker/BSticker'
+import axios from 'axios'
 
 class AddSticker extends Component {
   render () {
     return (
       <div id = "AddSticker">
-        <button id = "Plus" onClick = { this.props.onClickPlus }>
+        <button id = "Plus" onClick = {this.props.onClickPlus}>
           <img src="./button_img/plus.png" id="plus" alt="plus"/>
         </button>
       </div>
@@ -35,17 +36,12 @@ class StickerDiscription extends Component {
 class StickerHead extends Component {
   constructor (props) {
     super(props)
-    this.handleHide = this.handleHide.bind(this)
     this.handleChangeTitle = this.handleChangeTitle.bind(this)
-  }
-
-  handleHide () {
-    this.setState({showModal: false})
   }
 
   handleChangeTitle (event) {
     const title = event.target.value
-    this.props.addCard(title)
+    this.props.onChange(title)
   }
 
   render () {
@@ -69,21 +65,43 @@ class StickerHead extends Component {
 }
 
 class MainStickerField extends Component {
-  /*
   constructor (props) {
     super(props)
     this.state = { id: 15, title: '', color: 'yellow' }
+
+    this.changeTitle = this.changeTitle.bind(this)
+    this.addInfo = this.addInfo.bind(this)
+
+    this.apiUrl = 'http://localhost:5000/api/sticker_info'
   }
-  */
+
+  changeTitle (newTitle) {
+    this.setState({title: newTitle})
+    console.info('Send to server: ' + this.state.title)
+    axios.post(this.apiUrl, { title: this.state.title })
+      .then((res) => {
+        console.info(res.data)
+        console.info('changeTitle is working')
+      })
+  }
+
+  addInfo () {
+    const title = this.state.title
+    this.props.onClick(title)
+    console.info('Click is working')
+  }
 
   render () {
     return (
       <div id = 'MainStickerField'>
         <StickerHead
-          onClickClose = {this.props.onClickClose}/>
-        <StickerDiscription/>
+          onClickClose = {this.props.onClickClose}
+          onChange = {this.changeTitle}
+        />
+        <StickerDiscription
+        />
         <AddSticker
-          onClickPlus = {this.props.addCard}
+          onClickPlus = {this.props.onClickPlus}
         />
       </div>
     )
