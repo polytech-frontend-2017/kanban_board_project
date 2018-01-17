@@ -1,22 +1,57 @@
-* {
-    box-sizing: border-box;
-}
-html, body, .app {
-    height: 100%;
-    margin: 0 auto;
-    padding: 0;
-}
-.app{
-    white-space: nowrap;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-content: space-between;
-    align-items: center;
-}
-
 #board {
-   flex-grow: 10;
+    display: flex;
+    flex: 5 5 auto;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-content: stretch;
+    align-items: stretch;
     background-color: #ecf9fd;
     width: 100%;
+}
+
+#worker-columns {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-content: stretch;
+    width: 100%;
+    flex: 5 5 auto;
+    margin-block-end: 10px;
+}
+
+#worker-columns.listComponent {
+    height: 100%;
+    margin:20px;
+}
+
+.ColumnHeader {
+    text-align: center;
+    color: #ff802a;
+    font-size: 25px;
+}
+
+.listIn {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    min-height: 85%;
+    min-width: 400px;
+    max-width: 400px;
+    overflow: hidden;
+    background-color: #22a7d0;
+}
+ 
+.listIn:hover {
+    overflow-y: scroll;
+}
+
+#bottom {
+    display: flex;
+    flex-direction: row;
+    flex: 1 1 auto;
+    min-height: 100px;
+    background-color: #22a7d0;
+    width: 100%;
+    color: white;
 }
