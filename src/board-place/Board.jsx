@@ -12,7 +12,6 @@ class Board extends Component {
   constructor (props) {
     super(props)
     this.state = {
-
       cards: [
         {
           id: 1,

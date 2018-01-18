@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import ReactDOM from 'react-dom'
 import Modal from '../../modal/Modal'
 import BigSticker from '../../big-sticker/BSticker'
-import MiniCard from '../miniCard/miniCard.jsx'
 import ListComponent from '../listComp.jsx'
 import PropTypes from 'prop-types'
 import './Bottom.css'
@@ -58,7 +57,7 @@ class Bottom extends Component {
     let listComp
 
     if (this.props.cards) {
-      listComp = <ListComponent id='userList' cards = {this.props.cards}/>
+      listComp = <ListComponent id='start' cards = {this.props.cards}/>
     }
 
     return (

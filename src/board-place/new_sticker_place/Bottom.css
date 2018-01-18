@@ -1,5 +1,16 @@
-#AddStickerButton
-{
+#bottom {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    flex: 1 1 auto;
+    min-height: 120px;
+    background-color: #22a7d0;
+    max-width: 100%;
+    min-width: 100%;
+}
+
+#AddStickerButton {
     margin:1%;
     width: 153px;
     height: 90px;
@@ -15,4 +26,21 @@
     width: 40px;
     height: 40px;
     cursor: pointer;
+}
+
+#start {
+    display: flex;
+    flex-grow: 1;
+    padding: 1%;
+    height: 100%;
+    max-height: 100px;
+    overflow-y: scroll;
+}
+
+#start .listIn {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    height: 100%;
+    width: 100%;
 }

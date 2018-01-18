@@ -16,9 +16,13 @@ class ListComponent extends Component {
         />
       )
     })
+    let columnTitle
+    if (this.props.id !== 'start') {
+      columnTitle = <h1 className="ColumnHeader">{this.props.title}</h1>
+    }
     return (
-      <div className="listComponent">
-        <h1 className="ColumnHeader">{this.props.title}</h1>
+      <div id = { this.props.id } className="listComponent">
+        { columnTitle }
         <div className="listIn" >{cards}</div>
       </div>
     )

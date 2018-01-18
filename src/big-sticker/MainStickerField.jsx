@@ -76,13 +76,14 @@ class MainStickerField extends Component {
   }
 
   changeTitle (newTitle) {
-    this.setState({title: newTitle})
-    console.info('Send to server: ' + this.state.title)
-    axios.post(this.apiUrl, { title: this.state.title })
-      .then((res) => {
-        console.info(res.data)
-        console.info('changeTitle is working')
-      })
+    this.setState({title: newTitle}, () => {
+      console.info('Send to server: ' + this.state.title)
+      axios.post(this.apiUrl, { title: this.state.title })
+        .then((res) => {
+          console.info(res.data)
+          console.info('changeTitle is working')
+        })
+    })
   }
 
   addInfo () {

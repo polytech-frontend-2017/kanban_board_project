@@ -5,7 +5,6 @@ import ToDoList from './ToDoList'
 import MainStickerField from './MainStickerField'
 import UserList from './UserList'
 
-
 class ButtonCheckDiv extends Component {
   render () {
     return (
