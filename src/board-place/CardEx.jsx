@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-//import CSSTransitionGroup from 'react-transition-group/CSSTransitionGroup';
+// import CSSTransitionGroup from 'react-transition-group/CSSTransitionGroup';
 import PropTypes from 'prop-types'
 import { DragSource } from 'react-dnd'
 
@@ -12,7 +12,8 @@ class Card extends Component {
     return (
       <div className="card" draggable="true" style={BackgrounColor}>
         <div className="card_title" >{this.props.title}
-      
+          <br/>
+          {this.props.description}
         </div>
       </div>
     )

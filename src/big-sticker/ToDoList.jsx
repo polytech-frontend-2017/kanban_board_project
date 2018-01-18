@@ -47,7 +47,7 @@ class TodoApp extends React.Component {
     this.state = {
       data: []
     }
-    this.apiUrl = 'http://127.0.0.1:5000/foo'
+    this.apiUrl = 'awdwahttp://127.0.0.1:5000/foo'
   }
   // Lifecycle method
   componentDidMount () {

@@ -6,7 +6,7 @@ input[type="checkbox"] {
 label {
    cursor: pointer;
    text-decoration: underline;
-   -moz-user-select: -moz-none;
+   -moz-user-select: none;
    -webkit-user-select: none;
     user-select: none;
   
@@ -26,16 +26,15 @@ label {
     
 }
 input:checked ~ .block { 
-   
     display: flex;
     flex-direction: column;
     background:none;
+    display: none;
     -webkit-animation:fade ease-in 3s; 
     -moz-animation:fade ease-in 1s;
     animation:fade ease-in 0.75s; 
-
-
 }
+
 @-moz-keyframes fade {
     from { opacity: 0; }
 to { opacity: 1 }
