@@ -68,15 +68,18 @@ class Board extends Component {
         // Set state with result
         console.info('А тут уже блок с карточками читает:')
         console.info(res.data)
+        let newCard = {
+          id: '15',
+          title: res.data.title,
+          status: 'start',
+          color: '#ffa5ac'
+        }
+        let cardArray = this.state.cards
+        cardArray.push(newCard)
+        console.info(cardArray)
         this.setState({
-          newCard: {
-            id: '15',
-            title: res.data.title,
-            status: 'start',
-            color: '#ffa5ac'
-          }
+          cards: cardArray
         })
-        this.state.cards.push(this.state.newCard)
       })
   }
 

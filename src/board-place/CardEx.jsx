@@ -21,7 +21,7 @@ class Card extends Component {
 };
 Card.PropTypes =
 {
-  id: PropTypes.number,
+  id: PropTypes.string,
   title: PropTypes.string,
   color: PropTypes.string
 }
