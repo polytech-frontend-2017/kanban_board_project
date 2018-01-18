@@ -1,40 +1,55 @@
 import React, { Component } from 'react'
+import PropTypes from 'prop-types'
+import Checkbox from './checkbox'
 import './TaskForm.css'
 
-class TaskForm extends Component{
+class Item extends React.Component{
+    render() {
+      let listItems = this.props.items.map((item, i) => {
+        return (
+       <li className="LiItem" key={i}>
+            <div /* onClick={this.props.clickAction.bind(this, i)}*/ className="delete">
+                <Checkbox />
+            </div>
+            <div className="text">
+                {item}
+            </div>   
+        </li>
+          
+        );
+      });
+      return <ul> {listItems}</ul>
+    }
+  }
+class Todo extends Component{
     constructor(props) {
         super(props);
         this.state = {task: ''};
       }
 
-      /*updateText = (e => {
-        this.setState({task: e.target.value});
-      });
-
-      submitForm = (e => {
+    TaskUpdate=(e=>{
+        this.setState({task:e.target.value});
+    });
+    SendForm=(e=>{
         e.preventDefault();
-        let item = e.target[0].value;
-     
-      });
-
-      addItem = (item => {
-        let newItems = this.state.items;
-        newItems.push(item);
-        this.setState({items: newItems});
-      });*/
+        let taskItem=e.target[0].value;
+        this.props.submitAction(taskItem);
+        this.setState({task: ''}); 
+    });
 
     render()
     {
         return(
-            <form id="TaskForm"/* SubmitAction={this.addItem} onSubmit={this.submitForm}*/ >
+            <form className="TaskForm" onSubmit={this.SendForm} >
                 <input 
                 type="text"
                 id="TaskName" 
                 placeholder="Input some task" 
-                /*onChange={this.updateText} */
-                autofocus="autofocus" 
-                reiqured/>
-
+                onChange={this.TaskUpdate}
+                value={this.state.task}
+                maxlength="21"
+                autocomplete="off"
+                />
                 <input
                 type="submit" 
                 id="AddTask" 
@@ -43,14 +58,38 @@ class TaskForm extends Component{
         );
     }
 }
-/*
-class ShowList extends Component{
+class Task extends React.Component{
+    constructor(props) {
+    super(props);
+    this.state = {
+      items: [ ] };
+  }
+    addNewItem = (taskItem => {
+    let newItems = this.state.items;
+    newItems.push(taskItem);
+    this.setState({items: newItems});
+  });
 
-
-    render()
-    {return();}
+render()
+{
+  return(
+  <div>
+      <Todo submitAction={this.addNewItem}/>
+      <Item items={this.state.items}/>
+   </div>
+  )
 }
-class Show extends Component{
-}*/
+  
+}
+class List extends React.Component{
+    render()
+    {
+      return(
+        <div>
+          <Task/>
+        </div>
+        )
+    }
+  }
 
-export default  TaskForm;
+export default  List;

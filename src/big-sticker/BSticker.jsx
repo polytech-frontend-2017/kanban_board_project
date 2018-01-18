@@ -44,7 +44,6 @@ class RemoveStic extends Component{
 class Color extends Component{
   render(){return(
       <div class="Color">
-      
         <input type="checkbox" id="check"/>
           <button id = "ChangeColour" className = 'CurcleButton'>
             <label for="check">
@@ -97,7 +96,7 @@ class BigSticker extends Component {
   render () {
     return (
       <div id = 'BigSticker'>
-         <ButtonCheckDivs/>
+        <ButtonCheckDivs/>
         <MainStickerField onClickClose = {this.props.onClickClose}/>
         <ButtonUsersDiv/>
       </div>
