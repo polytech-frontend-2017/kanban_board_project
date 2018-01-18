@@ -2,6 +2,7 @@
     display: flex;
     flex: 5 5 auto;
     flex-direction: column;
+    flex-wrap: nowrap;
     justify-content: space-around;
     align-content: stretch;
     align-items: stretch;

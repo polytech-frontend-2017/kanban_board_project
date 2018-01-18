@@ -2,7 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import axios from 'axios'
 import './BSticker.css'
-
+import ButtonCheckDiv from './ShowHideBlock'
 console.clear()
 
 const TodoForm = ({addTodo}) => {
@@ -83,16 +83,17 @@ class TodoApp extends React.Component {
         this.setState({data: remainder})
       })
   }
-
+/*
+//внутри туду
+  <TodoForm addTodo={this.addTodo.bind(this)}/>
+        <TodoList
+          todos={this.state.data}
+          remove={this.handleRemove.bind(this)}
+        />*/
   render () {
     // Render JSX
     return (
       <div id = "ToDo">
-        <TodoForm addTodo={this.addTodo.bind(this)}/>
-        <TodoList
-          todos={this.state.data}
-          remove={this.handleRemove.bind(this)}
-        />
       </div>
     )
   }
