@@ -22,15 +22,15 @@ class ButtonUsersDiv extends Component {
     return (
       <div id = 'ButtonUsersDiv'>
         <button id = "GetUsersList" className = 'CurcleButton'>
-        <img src="./button_img/add-user-button.png" id="AddUser" alt="AddUser"/>
+          <img src="./button_img/add-user-button.png" id="AddUser" alt="AddUser"/>
 
         </button>
         <button id = "ChangeColour" className = 'CurcleButton'>
-        <img src="./button_img/paint-bucket.png" id="PaintBucket" alt="PaintBucket"/>
+          <img src="./button_img/paint-bucket.png" id="PaintBucket" alt="PaintBucket"/>
 
         </button>
         <button id = "RemoveSticker" className = 'CurcleButton'>
-        <img src="./button_img/rubbish-bin.png" id="RemoveStic" alt="RemoveSticker"/>
+          <img src="./button_img/rubbish-bin.png" id="RemoveStic" alt="RemoveSticker"/>
         </button>
       </div>
     )
@@ -45,6 +45,7 @@ class BigSticker extends Component {
         <ButtonCheckDiv/>
         <MainStickerField
           onClickClose = {this.props.onClickClose}
+          onClickPlus = {this.props.onClickPlus}
         />
         <ButtonUsersDiv/>
         <UserList/>

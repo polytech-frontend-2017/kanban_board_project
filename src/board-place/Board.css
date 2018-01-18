@@ -1,22 +1,45 @@
-* {
-    box-sizing: border-box;
-}
-html, body, .app {
-    height: 100%;
-    margin: 0 auto;
-    padding: 0;
-}
-.app{
-    white-space: nowrap;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-content: space-between;
-    align-items: center;
-}
-
 #board {
-   flex-grow: 10;
+    display: flex;
+    flex: 5 5 auto;
+    flex-direction: column;
+    justify-content: space-around;
+    align-content: stretch;
+    align-items: stretch;
     background-color: #ecf9fd;
     width: 100%;
+}
+
+#worker-columns {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-content: stretch;
+    max-width: 100%;
+    flex: 5 5 auto;
+    margin-block-end: 10px;
+}
+
+#worker-columns.listComponent {
+    min-height: 32%;
+    max-height: 32%;
+    margin:20px;
+}
+
+.ColumnHeader {
+    text-align: center;
+    color: #ff802a;
+    font-size: 25px;
+}
+
+#worker-columns .listComponent .listIn {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: flex-start;
+    max-height: 400px;
+    min-height: 400px;
+    min-width: 400px;
+    max-width: 400px;
+    overflow-y: scroll;
+    background-color: #22a7d0;
 }

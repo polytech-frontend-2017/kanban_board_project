@@ -6,7 +6,7 @@ html, body, #root, #App {
 #App {
   display: flex; 
   flex-direction: column; 
-  justify-content: space-around;
+  justify-content: center;
   align-content: stretch;
   align-items: center;
   text-align: left;
