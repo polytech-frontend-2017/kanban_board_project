@@ -33,12 +33,13 @@ class RemoveStic extends Component{
   render()
   {
     return(
-      <button id = "RemoveSticker" className = 'CurcleButton'>
-      <img src="./button_img/rubbish-bin.png" id="RemoveStic" alt="RemoveSticker"/>
-      </button>
+        <button id = "RemoveSticker" className = 'CurcleButton'>
+        <img src="./button_img/rubbish-bin.png" id="RemoveStic" alt="RemoveSticker"/>
+        </button>
     );
   }
 }
+
 
 class ButtonUsersDiv extends Component {
   render () {

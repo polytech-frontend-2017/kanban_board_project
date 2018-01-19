@@ -11,8 +11,10 @@ class Card extends Component {
 
     return (
       <div className="card" draggable="true" style={BackgrounColor}>
-        <div className="card_title" >{this.props.title}
-          <br/>
+        <div className="card_title" >
+          {this.props.title}
+        </div>
+        <div className="card_description" >
           {this.props.description}
         </div>
       </div>
