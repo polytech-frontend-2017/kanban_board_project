@@ -43,22 +43,22 @@ class RemoveStic extends Component{
 
 class Color extends Component {
   render () {
- return (
-    <div class="Color">
-      <input type="checkbox" id="check"/>
-      <button id = "ChangeColour" className = 'CurcleButton'>
-        <label for="check">
-          <img src="./button_img/paint-bucket.png" id="PaintBucket" alt="PaintBucket"/>
-        </label>
-      </button>
+    return (
+      <div class="Color">
+        <input type="checkbox" id="check"/>
+        <button id = "ChangeColour" className = 'CurcleButton'>
+          <label for="check">
+            <img src="./button_img/paint-bucket.png" id="PaintBucket" alt="PaintBucket"/>
+          </label>
+        </button>
 
-      <div class="block">
-        <button class="but" id="green" ></button>
-        <button class="but" id="pink"></button>
-        <button class="but" id="yelluw"></button>
+        <div class="block">
+          <button class="but" id="green" ></button>
+          <button class="but" id="pink"></button>
+          <button class="but" id="yelluw"></button>
+        </div>
       </div>
-    </div>
-  )
+    )
   }
 }
 

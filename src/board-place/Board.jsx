@@ -13,55 +13,33 @@ class Board extends Component {
     super(props)
     this.state = {
       cards: [
-        {
-          id: 1,
-          title: 'first card',
-          description: 'some desc',
-          status: 'todo',
-          color: '#85e996'
-        },
-        {
-          id: 2,
-          title: 'second card',
-          description: 'some desc',
-          status: 'done',
-          color: '#ffa5ac'
-        }, {
-          id: 4,
-          title: 'fourth card',
-          description: 'some desc',
-          status: 'in-progress',
-          color: '#85e996'
-        },
-        {
-          id: 3,
-          title: 'third card',
-          description: 'some desc',
-          status: 'in-progress',
-          color: '#fefb64'
-        }, {
-          id: 5,
-          title: 'fifth card',
-          description: 'some desc',
-          status: 'in-progress',
-          color: '#ffa5ac'
-        }, {
-          id: 6,
-          title: 'second card',
-          status: 'in-progress',
-          color: '#fefb64'
-        }
-      ],
-      newCard: {
-        id: '',
-        title: '',
-        status: 'start',
-        color: ''
-      }
+        { }
+      ]
     }
 
     this.addCard = this.addCard.bind(this)
     this.apiUrl = 'http://localhost:5000/api/sticker_info'
+  }
+
+  componentDidMount () {
+    axios.get(this.apiUrl)
+      .then((res) => {
+        let cardArray = this.state.cards
+        for (var i = 0; i < res.data.card.length; i++) {
+          let newCard = {
+            id: res.data.card[i].Sticker_id,
+            title: res.data.card[i].Title,
+            status: res.data.card[i].Status,
+            description: res.data.card[i].Description,
+            color: res.data.card[i].Colour
+          }
+          cardArray.push(newCard)
+        }
+        this.setState({
+          cards: cardArray
+        })
+        console.info(this.state.cards)
+      })
   }
 
   addCard () {
