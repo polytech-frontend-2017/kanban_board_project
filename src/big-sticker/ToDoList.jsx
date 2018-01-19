@@ -99,6 +99,5 @@ class TodoApp extends React.Component {
   }
 }
 
-// ReactDOM.render(<TodoApp />, document.getElementById('container'))
 
 export default TodoApp

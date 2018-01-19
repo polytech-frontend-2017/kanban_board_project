@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import Checkbox from './checkbox'
 import './TaskForm.css'
 
-class Item extends React.Component{
+class Item extends Component{
     render() {
       let listItems = this.props.items.map((item, i) => {
         return (
@@ -49,6 +49,7 @@ class Todo extends Component{
                 value={this.state.task}
                 maxlength="21"
                 autocomplete="off"
+                required
                 />
                 <input
                 type="submit" 
