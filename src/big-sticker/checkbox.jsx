@@ -31,6 +31,7 @@ export default class Checkbox extends Component {
               type="checkbox"
               checked={checked}
               onChange={this.handleChange}
+              required
             />
       </div>
       );
