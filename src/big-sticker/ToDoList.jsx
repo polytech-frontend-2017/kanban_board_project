@@ -1,8 +1,9 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import axios from 'axios'
-import './BSticker.css'
+import './style/BSticker.css'
 import ButtonCheckDiv from './ShowHideBlock'
+console.clear()
 
 const TodoForm = ({addTodo}) => {
   // Input Tracker

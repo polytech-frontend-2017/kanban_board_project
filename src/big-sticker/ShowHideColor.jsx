@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import './ShowHideColor.css'
+import './style/ShowHideColor.css'
 //import Color from './'
 
  class Color extends Component{

@@ -1,17 +1,17 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import Checkbox from './checkbox'
-import './TaskForm.css'
+import './style/TaskForm.css'
 
 class Item extends Component{
     render() {
       let listItems = this.props.items.map((item, i) => {
         return (
-       <li className="LiItem" key={i}>
-            <div /* onClick={this.props.clickAction.bind(this, i)}*/ className="delete">
-                <Checkbox />
+       <li className="LiItem" key={i}   onClick={this.props.clickAction.bind(this, i)}>
+            <div className="delete">
+               &#10006;
             </div>
-            <div className="text">
+            <div className="text" >
                 {item}
             </div>   
         </li>
@@ -70,13 +70,19 @@ class Task extends React.Component{
     newItems.push(taskItem);
     this.setState({items: newItems});
   });
+  deleteItem = (idx => {
+    let newItems = this.state.items;
+    newItems.splice(idx, 1);
+    this.setState({items: newItems});
+  });
 
 render()
 {
   return(
   <div>
       <Todo submitAction={this.addNewItem}/>
-      <Item items={this.state.items}/>
+      <Item items={this.state.items}
+      clickAction={this.deleteItem}/>
    </div>
   )
 }

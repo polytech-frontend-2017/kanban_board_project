@@ -2,9 +2,10 @@ import React, { Component } from 'react'
 import ReactDOM from 'react-dom'
 import Modal from '../../modal/Modal'
 import BigSticker from '../../big-sticker/BSticker'
-import ListComponent from '../listComp.jsx'
+import ListComponent from '../listComp'
 import PropTypes from 'prop-types'
 import './Bottom.css'
+
 
 class NewStickerButton extends Component {
   constructor (props) {
@@ -35,7 +36,7 @@ class NewStickerButton extends Component {
     ) : null
 
     return (
-      <div>
+      <div id="blockbut">
         <button
           onClick={ this.handleClick }
           id="AddStickerButton"
@@ -57,7 +58,7 @@ class Bottom extends Component {
     let listComp
 
     if (this.props.cards) {
-      listComp = <ListComponent id='start' cards = {this.props.cards}/>
+      listComp = <ListComponent  cards = {this.props.cards}/>
     }
 
     return (
@@ -65,7 +66,7 @@ class Bottom extends Component {
         <NewStickerButton
           onClickPlus = {this.props.onClickPlus}
         />
-        { listComp }
+       
       </div>
     )
   }

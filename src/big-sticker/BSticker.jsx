@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import ReactDOM from 'react-dom'
-import './BSticker.css'
+import './style//BSticker.css'
 import ToDoList from './ToDoList'
 import MainStickerField from './MainStickerField'
 import UserList from './UserList'
@@ -33,13 +33,12 @@ class RemoveStic extends Component{
   render()
   {
     return(
-        <button id = "RemoveSticker" className = 'CurcleButton'>
-        <img src="./button_img/rubbish-bin.png" id="RemoveStic" alt="RemoveSticker"/>
-        </button>
+      <button id = "RemoveSticker" className = 'CurcleButton'>
+      <img src="./button_img/rubbish-bin.png" id="RemoveStic" alt="RemoveSticker"/>
+      </button>
     );
   }
 }
-
 
 class ButtonUsersDiv extends Component {
   render () {

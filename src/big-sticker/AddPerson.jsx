@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import './AddPerson.css'
+import './style/AddPerson.css'
 class SearchPerson extends Component
 {
     constructor (props) {

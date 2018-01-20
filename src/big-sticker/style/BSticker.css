@@ -1,0 +1,125 @@
+#BigSticker {
+    display: flex;
+    align-self: flex-end;
+    height: 69%;
+    width: 71%;
+}
+
+#ToDo {
+    display: flex;
+    align-self: flex-end;
+    height: 85%;
+    width: auto;
+    background-color: green;
+}
+
+#TaskList
+{
+    overflow-y: scroll;
+    -ms-flex-item-align: end;
+    align-self: flex-end;
+    justify-content:end;
+    width:30vh;
+    height: 80vh;
+    background-color: #ffffff;
+    border:1pt solid #000000;
+    -webkit-border-top-right-radius: 2px;
+    -webkit-border-bottom-right-radius: 2px;
+    -moz-border-radius-topright: 2px;
+    -moz-border-radius-bottomright: 2px;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+    -webkit-animation:fade ease-in 1s; 
+    -moz-animation:fade ease-in 1s;
+    animation:fade ease-in 0.75s; 
+    /* Не уверенна что это законно!*/
+    margin-right: 105%;
+    margin-top:0%;
+}
+
+@-moz-keyframes fade {
+    from { opacity: 0; }
+to { opacity: 1 }
+}
+@-webkit-keyframes fade {
+    from { opacity: 0; }
+to { opacity: 1 }
+}
+@keyframes fade {
+    from { opacity: 0; }
+to { opacity: 1 }   
+}
+#show,#hide{
+    position: absolute;
+  }
+
+#ButtonCheckDivs{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-self: center;
+    height: 70%;
+    width: 5%;
+}
+#ButtonUsersDiv {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    align-items: center;
+    height: 70%;
+    width: 5%;
+}
+.CurcleButton {
+    height: 45px;
+    width: 45px;
+    margin-top: 2%;
+    border-radius: 100%;
+    border: 0px;
+    background-color: #22a7d0;
+}
+#RemoveSticker {
+    margin-top: 50%;
+}
+#GetCheckListImg
+{
+    width: 25px;
+    height: 25px;
+}
+#AddUser
+{
+    width: 26px;
+    height: 28px;
+  
+}
+#PaintBucket{
+    
+    width: 27px;
+    height: 27px;
+}
+#RemoveStic
+{
+    
+    width: 26px;
+    height: 23px;
+}
+
+/*shadow style for button*/
+#GetCheckList,
+#GetUsersList,
+#ChangeColour,
+#RemoveSticker
+{
+    border: 0px;
+    box-shadow: 0px 3px 15px #000000,
+    inset 0 0px 0 rgba(0, 0, 0, 0.6),
+    0 5px 0 rgba(0,0,0,.1),
+    inset 0 0 2px rgba(0,0,0,.1);
+    cursor: pointer;
+}
+#GetCheckList:hover,
+#GetUsersList:hover,
+#ChangeColour:hover,
+#RemoveSticker:hover
+{
+background-color:#ff802a;
+}

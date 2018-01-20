@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import ReactDOM from 'react-dom'
-import './MainStickerField.css'
+import './style/MainStickerField.css'
 import Modal from '../modal/Modal'
 import BigSticker from '../big-sticker/BSticker'
 import axios from 'axios'
