@@ -74,6 +74,7 @@
     height: 15%;
 }
 #Plus, #Close {
+    cursor: pointer;
     display: flex;
     height: auto;
     width: auto;
@@ -84,13 +85,7 @@
     text-decoration: none;
     background:#22a7d0;
 }
-#close:hover,#plus:hover{
-    height: 32px;
-    width: 32px;
-    cursor: pointer;
-    transition:color 3s 3s linear;
 
-}
 #plus,#close{
     height: 28px;
     width: 26px;
