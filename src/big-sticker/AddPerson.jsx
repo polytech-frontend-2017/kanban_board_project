@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import './AddPerson.css'
+import './style/AddPerson.css'
 class SearchPerson extends Component
 {
     constructor (props) {
@@ -16,7 +16,6 @@ class SearchPerson extends Component
             }, {
               id: 4,
               name: 'PZ'
-              
             }
           ]
         }
@@ -26,20 +25,20 @@ class SearchPerson extends Component
 
     render()
     {
-        return(
-            <form>
-                <input 
-                type="text"
-                placeholder="Search..."
-                className="InputSearchPerson"
-                />
-                <input 
-                type="submit"
-                value="Go"
-                className="InputSubmitSearchPerson"
-                />
-            </form>
-        );
+      return(
+        <form>
+            <input 
+              type="text"
+              placeholder="Search..."
+              className="InputSearchPerson"
+            />
+            <input 
+              type="submit"
+              value="Go"
+              className="InputSubmitSearchPerson"
+            />
+        </form>
+      );
     }
 }
  

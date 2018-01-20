@@ -1,0 +1,109 @@
+#MainStickerField {
+    display: flex;
+    flex-direction: column;
+    align-content: stretch;
+    align-items: stretch;
+    height: 85%;
+    width: 50%;
+    background-color: #22a7d0;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+#StickerHead {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 15%;
+    padding-left: 5%;
+}
+#StickerID {
+    font-family: "Roboto", sans-serif;
+    color:darkslategray;
+    height:  60%;
+    font-size: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 20%;
+    line-height: 1.8em;
+    text-align: center;
+    vertical-align: middle;
+    background: #fff6cf;
+    box-sizing: border-box;
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+}
+#StickerName {
+    align-self: center;
+    height: 60%;
+    width: 60%;
+    font-size: 20px;
+    background: #fff6cf;
+    font-family: "Roboto", sans-serif;
+    border: 0;
+    box-sizing: border-box;
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
+#TArea {
+    flex: 10 10 auto;
+    font-family: "Roboto", sans-serif;
+    background-color: #fff6cf;
+    width: 90%; 
+    font-size: 26px;
+    resize: none; 
+    text-align: center;
+    vertical-align: middle;
+    border-radius: 6px;
+}
+#StickerDiscription {
+    display: flex;
+    flex-direction: column;
+    height: 70%;
+    display: flex;
+    justify-content: center;
+    align-content: space-between;
+    align-items: center;
+}
+#StickerDiscription:last-child {
+    flex: 1 1 auto;
+}
+#AddSticker {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 15%;
+}
+#Plus, #Close {
+    display: flex;
+    height: auto;
+    width: auto;
+    opacity: 1;
+    border: 0px;
+    margin: 0 auto;
+    outline: none;
+    text-decoration: none;
+    background:#22a7d0;
+}
+#close:hover,#plus:hover{
+    height: 32px;
+    width: 32px;
+    cursor: pointer;
+    transition:color 3s 3s linear;
+
+}
+#plus,#close{
+    height: 28px;
+    width: 26px;
+
+}
+#date{
+    border: 1px solid #cecece;
+    border-radius: 8px;
+    padding-bottom: 5px\0;
+    padding: 6px 10px 4px 10px;
+    font-family: "Roboto", sans-serif;
+    background-color: #fff6cf;
+    font-size: 16px;
+    color:  #888181;
+    text-align: center;
+}

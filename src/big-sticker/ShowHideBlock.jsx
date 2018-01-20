@@ -35,10 +35,11 @@ class ButtonCheckDivs extends Component {
 function Showm(props) {
   return  (
   <div id = 'TaskList'>
-    <div id="task"> <List /></div>
+    <div id="task">
+     <List />
+    </div>
   </div>
   );
-  //здесь подключим компонент с тасками
 }
 
 function Hidem(props) {
@@ -50,11 +51,15 @@ function Indicator(props) {
   if(IsShow){
     return <Showm />;
   }
-  return <Hidem />;
+    return <Hidem />;
 }
 function Show(props) {
-  return (<div id="show"><button id="GetCheckList" className = 'CurcleButton' onClick={props.onClick}> <img src="./button_img/list.png" id="GetCheckListImg" alt="checkedList"/>
-  </button></div>);
+  return (
+  <div id="show">
+    <button id="GetCheckList" className = 'CurcleButton' onClick={props.onClick}>
+      <img src="./button_img/list.png" id="GetCheckListImg" alt="checkedList"/>
+    </button>
+  </div>);
 }
 
 function Hide(props) {

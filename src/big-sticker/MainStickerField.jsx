@@ -1,8 +1,5 @@
 import React, {Component} from 'react'
-import ReactDOM from 'react-dom'
-import './MainStickerField.css'
-import Modal from '../modal/Modal'
-import BigSticker from '../big-sticker/BSticker'
+import './style/MainStickerField.css'
 import axios from 'axios'
 import Board from '../board-place/Board'
 
@@ -81,7 +78,7 @@ class StickerHead extends Component {
       <div id = "StickerHead" >
         <div id = "StickerID">New</div>
         <input
-          autofocus="autofocus"
+          autoFocus="autofocus"
           type = "text"
           id = "StickerName"
           onChange = {this.handleChangeTitle}
@@ -127,11 +124,6 @@ class MainStickerField extends Component {
         this.setState({color: '#fff6cs'})
         break
     }
-    /*
-    this.setState({title: newTitle}, () => {
-
-    })
-    */
   }
 
   addInfo () {
