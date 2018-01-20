@@ -8,7 +8,6 @@
     background-color: #22a7d0;
     box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 }
-
 #StickerHead {
     display: flex;
     align-items: center;
@@ -16,7 +15,6 @@
     height: 15%;
     padding-left: 5%;
 }
-
 #StickerID {
     font-family: "Roboto", sans-serif;
     color:darkslategray;
@@ -34,7 +32,6 @@
     border-top-left-radius: 6px;
     border-bottom-left-radius: 6px;
 }
-
 #StickerName {
     align-self: center;
     height: 60%;
@@ -47,8 +44,6 @@
     border-top-right-radius: 6px;
     border-bottom-right-radius: 6px;
 }
-
-
 #TArea {
     flex: 10 10 auto;
     font-family: "Roboto", sans-serif;
@@ -69,18 +64,15 @@
     align-content: space-between;
     align-items: center;
 }
-
 #StickerDiscription:last-child {
     flex: 1 1 auto;
 }
-
 #AddSticker {
     display: flex;
     flex-direction: column;
     justify-content: center;
     height: 15%;
 }
-
 #Plus, #Close {
     display: flex;
     height: auto;
@@ -92,7 +84,6 @@
     text-decoration: none;
     background:#22a7d0;
 }
-
 #close:hover,#plus:hover{
     height: 32px;
     width: 32px;
@@ -105,8 +96,6 @@
     width: 26px;
 
 }
-
-
 #date{
     border: 1px solid #cecece;
     border-radius: 8px;

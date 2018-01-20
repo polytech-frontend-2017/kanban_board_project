@@ -5,20 +5,14 @@ import { DropTarget } from 'react-dnd'
 
 const listTargetSpec = {
   hover(props, monitor) {
-      const draggedId = monitor.getItem().id;
-      props.cardCallbacks.updateStatus(draggedId, props.id);
-
-      
-    console.log(draggedId)
-    console.log( props.id)
-    console.log(props)
-   
+    const draggedId = monitor.getItem().id;
+    props.cardCallbacks.updateStatus(draggedId, props.id);
     }
 };
 
 function collect(connect, monitor) {
   return {
-      connectDropTarget: connect.dropTarget()
+    connectDropTarget: connect.dropTarget()
   };
 }
      
@@ -47,7 +41,9 @@ class ListComponent extends Component {
     return connectDropTarget(
       <div id = { this.props.id } className="listComponent">
         { columnTitle }
-        <div className="listIn" >{cards}</div>
+        <div className="listIn" >
+          {cards}
+        </div>
       </div>
     )
   }
@@ -55,7 +51,7 @@ class ListComponent extends Component {
 ListComponent.PropTypes = {
   title: PropTypes.string.isRequired,
   cards: PropTypes.arrayOf(PropTypes.object),
-    connectDropTarget: PropTypes.func.isRequired
+  connectDropTarget: PropTypes.func.isRequired
 }
 
 export default DropTarget('card', listTargetSpec, collect)(ListComponent)

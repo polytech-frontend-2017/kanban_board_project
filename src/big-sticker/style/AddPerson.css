@@ -1,12 +1,5 @@
 /*style for search form*/
-form
-{
-    margin: 10%;
-    display: flex;
-    width: auto;
- 
-   
-}
+
 .InputSearchPerson
 {
     display: flex;
@@ -55,22 +48,21 @@ form
 
 @-moz-keyframes fade {
     from { opacity: 0; }
-to { opacity: 1 }
+    to { opacity: 1 }
 }
 @-webkit-keyframes fade {
     from { opacity: 0; }
-to { opacity: 1 }
+    to { opacity: 1 }
 }
 @keyframes fade {
     from { opacity: 0; }
-to { opacity: 1 }   
+    to { opacity: 1 }   
 }
 #Person{
     border: 0;
     display: flex;
     align-self: center;
     width: 10vh;
-    
     background-color: #ffffff;
 }
 #PersonList
@@ -86,23 +78,22 @@ to { opacity: 1 }
     -webkit-animation:fade ease-in 1s; 
     -moz-animation:fade ease-in 1s;
     animation:fade ease-in 0.75s; 
-    /* Не уверенна что это законно!*/
     margin-left: 70%;
     margin-top:0%;
 }
 
 @-moz-keyframes fade {
     from { opacity: 0; }
-to { opacity: 1 }
+    to { opacity: 1 }
 }
 @-webkit-keyframes fade {
     from { opacity: 0; }
-to { opacity: 1 }
+    to { opacity: 1 }
 }
 @keyframes fade {
     from { opacity: 0; }
-to { opacity: 1 }   
+    to { opacity: 1 }   
 }
 #hide{
-position: fixed;
+    position: fixed;
 }

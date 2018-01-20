@@ -32,22 +32,21 @@
     -webkit-animation:fade ease-in 1s; 
     -moz-animation:fade ease-in 1s;
     animation:fade ease-in 0.75s; 
-    /* Не уверенна что это законно!*/
     margin-right: 105%;
     margin-top:0%;
 }
 
 @-moz-keyframes fade {
     from { opacity: 0; }
-to { opacity: 1 }
+    to { opacity: 1 }
 }
 @-webkit-keyframes fade {
     from { opacity: 0; }
-to { opacity: 1 }
+    to { opacity: 1 }
 }
 @keyframes fade {
     from { opacity: 0; }
-to { opacity: 1 }   
+    to { opacity: 1 }   
 }
 #show,#hide{
     position: absolute;

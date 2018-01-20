@@ -1,8 +1,5 @@
 import React, {Component} from 'react'
-import ReactDOM from 'react-dom'
 import './style/MainStickerField.css'
-import Modal from '../modal/Modal'
-import BigSticker from '../big-sticker/BSticker'
 import axios from 'axios'
 
 class AddSticker extends Component {
@@ -49,7 +46,7 @@ class StickerHead extends Component {
       <div id = "StickerHead" >
         <div id = "StickerID">ID46</div>
         <input
-          autofocus="autofocus"
+          autoFocus="autofocus"
           type = "text"
           id = "StickerName"
           onChange = {this.handleChangeTitle}
@@ -68,10 +65,8 @@ class MainStickerField extends Component {
   constructor (props) {
     super(props)
     this.state = { id: 15, title: '', color: 'yellow' }
-
     this.changeTitle = this.changeTitle.bind(this)
     this.addInfo = this.addInfo.bind(this)
-
     this.apiUrl = 'http://localhost:5000/api/sticker_info'
   }
 
@@ -99,11 +94,10 @@ class MainStickerField extends Component {
           onClickClose = {this.props.onClickClose}
           onChange = {this.changeTitle}
         />
-        <StickerDiscription
-        />
+        <StickerDiscription/>
         <AddSticker
           onClickPlus = {this.props.onClickPlus}
-        />
+         />
       </div>
     )
   }

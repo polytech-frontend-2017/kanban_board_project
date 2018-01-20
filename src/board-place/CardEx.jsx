@@ -6,17 +6,17 @@ import { DragSource } from 'react-dnd'
 //описываем как надо реагировать на перетаскиваня
 const cardDragSpec = {
   beginDrag(props) {
-      return {
-          id: props.id,
-          status: props.status
-      };
+    return {
+      id: props.id,
+      status: props.status
+    };
   }
 };
 
 
 let collectDrag = (connect, monitor) => {
   return {
-      connectDragSource: connect.dragSource()
+    connectDragSource: connect.dragSource()
   };
 };
 

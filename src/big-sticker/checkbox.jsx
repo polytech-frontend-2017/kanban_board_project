@@ -26,13 +26,12 @@ export default class Checkbox extends Component {
       const { checked } = this.state;
       return (
         <div>
-          
-            <input 
-              type="checkbox"
-              checked={checked}
-              onChange={this.handleChange}
-              required
-            />
+          <input 
+            type="checkbox"
+            checked={checked}
+            onChange={this.handleChange}
+            required
+          />
       </div>
       );
     }

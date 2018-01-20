@@ -1,10 +1,8 @@
 /* style for form*/
-
 .TaskForm
 {
     margin: 10%;
     display: flex;
-    
 }
 #TaskName{
     display: flex;
@@ -50,11 +48,9 @@
     align-content: center;
     margin: 1%;
     cursor: pointer;
-
 }
 .text{
     padding-left:5%;
- 
 }
 .list{
     list-style: none;

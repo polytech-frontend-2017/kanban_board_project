@@ -6,37 +6,37 @@ class Person extends Component
 
     constructor(props)
     {
-        super(props);
-        this.ShowAddPersonBlock=this.ShowAddPersonBlock.bind(this);
-        this.HideAddPersonBlock=this.HideAddPersonBlock.bind(this);
-        this.state={IsShowPerson:false};
+      super(props);
+      this.ShowAddPersonBlock=this.ShowAddPersonBlock.bind(this);
+      this.HideAddPersonBlock=this.HideAddPersonBlock.bind(this);
+      this.state={IsShowPerson:false};
     }
     ShowAddPersonBlock()
     {
-        this.setState({IsShowPerson: true});
+      this.setState({IsShowPerson: true});
     }
     HideAddPersonBlock()
     {
-        this.setState({IsShowPerson: false});
+      this.setState({IsShowPerson: false});
     }
     render()
     {
-        const IsShowPerson = this.state.IsShowPerson;
-        let button = null;
-        if(IsShowPerson){
-          button = <HidePersonBlock  onClick={this.HideAddPersonBlock} /> 
-        } 
-        else {
-          button = <ShowPersonBlock onClick={this.ShowAddPersonBlock} />
-        }
-        return(
-            <div id="AddPersonDiv">
-             {button}
-            <Indicator IsShowPerson={IsShowPerson} />
-           
-          </div>            
-        );
-    }
+      const IsShowPerson = this.state.IsShowPerson;
+      let button = null;
+      if(IsShowPerson){
+        button = <HidePersonBlock  onClick={this.HideAddPersonBlock} /> 
+      } 
+      else {
+        button = <ShowPersonBlock onClick={this.ShowAddPersonBlock} />
+      }
+      return(
+        <div id="AddPersonDiv">
+          {button}
+          <Indicator IsShowPerson={IsShowPerson} />
+          
+        </div>            
+      );
+  }
 }
 function Showm(props) {
     return  (
@@ -61,8 +61,8 @@ function Indicator(props) {
   function ShowPersonBlock(props) {
     return (
     <div >
-     <button id = "GetUsersList" className = 'CurcleButton' onClick={props.onClick}>
-      <img src="./button_img/add-user-button.png" id="AddUser" alt="AddUser"/>
+      <button id = "GetUsersList" className = 'CurcleButton' onClick={props.onClick}>
+        <img src="./button_img/add-user-button.png" id="AddUser" alt="AddUser"/>
       </button>
     </div>);
   }
@@ -71,7 +71,7 @@ function Indicator(props) {
     return (
       <div id="hide">
          <button id = "GetUsersList" className = 'CurcleButton' onClick={props.onClick}>
-         <img src="./button_img/add-user-button.png" id="AddUser" alt="AddUser"/>
+            <img src="./button_img/add-user-button.png" id="AddUser" alt="AddUser"/>
          </button>
       </div>
     );
