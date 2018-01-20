@@ -1,10 +1,8 @@
 import React, { Component } from 'react'
-import ReactDOM from 'react-dom'
 import Modal from '../../modal/Modal'
 import BigSticker from '../../big-sticker/BSticker'
-import ListComponent from '../listComp.jsx'
-import PropTypes from 'prop-types'
 import './Bottom.css'
+
 
 class NewStickerButton extends Component {
   constructor (props) {
@@ -34,11 +32,10 @@ class NewStickerButton extends Component {
     ) : null
 
     return (
-      <div>
+      <div id="blockbut">
         <button
           onClick={ this.handleClick }
-          id="AddStickerButton"
-        >
+          id="AddStickerButton">
           <img
             src="./button_img/plus.png"
             className="AddStickerButton"
@@ -53,18 +50,11 @@ class NewStickerButton extends Component {
 
 class Bottom extends Component {
   render () {
-    let listComp
-
-    if (this.props.cards) {
-      listComp = <ListComponent id='start' cards = {this.props.cards}/>
-    }
-
-    return (
+   return (
       <div id = "bottom">
         <NewStickerButton
-          onClickPlus = {this.props.onClickPlus}
+        onClickPlus = {this.props.onClickPlus}
         />
-        { listComp }
       </div>
     )
   }
