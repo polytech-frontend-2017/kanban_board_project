@@ -1,7 +1,6 @@
 import React, {Component} from 'react'
 import './style/MainStickerField.css'
 import axios from 'axios'
-import Board from '../board-place/Board'
 
 class AddSticker extends Component {
   constructor (props) {

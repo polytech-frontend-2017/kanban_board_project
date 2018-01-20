@@ -38,7 +38,6 @@ const TodoList = ({todos, remove}) => {
 
 // Contaner Component
 // Todo Id
-window.id = 0
 class TodoApp extends React.Component {
   constructor (props) {
     // Pass props to parent class
@@ -83,13 +82,7 @@ class TodoApp extends React.Component {
         this.setState({data: remainder})
       })
   }
-  /*
-//внутри туду
-  <TodoForm addTodo={this.addTodo.bind(this)}/>
-        <TodoList
-          todos={this.state.data}
-          remove={this.handleRemove.bind(this)}
-        /> */
+
   render () {
     // Render JSX
     return (

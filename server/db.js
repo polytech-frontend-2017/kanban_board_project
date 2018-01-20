@@ -82,7 +82,6 @@ module.exports = {
     let result = ''
     db.any('SELECT * FROM "Sticker" WHERE "Project_id" = $1', [projectId])
       .then(function (data) {
-        // console.info(data)
         return (data)
       })
       .catch(function (e) {

@@ -86,7 +86,6 @@ to { opacity: 1 }
     -webkit-animation:fade ease-in 1s; 
     -moz-animation:fade ease-in 1s;
     animation:fade ease-in 0.75s; 
-    /* Не уверенна что это законно!*/
     margin-left: 70%;
     margin-top:0%;
 }

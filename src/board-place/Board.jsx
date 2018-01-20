@@ -108,10 +108,7 @@ class Board extends Component {
   updateCardStatus (cardId, listId) {
     // получаем id стикера
     let cardIndex = this.state.cards.findIndex((card) => card.id === cardId)
-    // получаем id поля
-    let card = this.state.cards[cardIndex]
-    // если не в текущем компоненте
-    // обновление статуса у стикера
+    
     this.setState(update(this.state, {
       cards: {
         [cardIndex]: {
@@ -139,10 +136,6 @@ class Board extends Component {
           cards: cardArray
         })
         console.info(this.state.cards)
-      })
-      .catch((err) => {
-        alert('Connection server problem!')
-        console.warn(err)  
       })
   }
 

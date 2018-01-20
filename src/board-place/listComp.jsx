@@ -5,6 +5,7 @@ import { DropTarget } from 'react-dnd'
 
 const listTargetSpec = {
   hover (props, monitor) {
+    console.info('hovering')
     const draggedId = monitor.getItem().id
     props.cardCallbacks.updateStatus(draggedId, props.id)
   }

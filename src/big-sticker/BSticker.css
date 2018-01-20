@@ -30,7 +30,6 @@
     border-bottom-right-radius: 2px;
     -moz-animation:fade ease-in 1s;
     animation:fade ease-in 0.75s; 
-    /* Не уверенна что это законно!*/
     margin-right: 105%;
     margin-top:0%;
 }
