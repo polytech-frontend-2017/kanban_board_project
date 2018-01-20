@@ -102,7 +102,7 @@ class MainStickerField extends Component {
     this.state = {
       title: '',
       description: '',
-      color: '#FFF6CS',
+      color: '#fefb64',
       date: ''
     }
 
@@ -124,7 +124,7 @@ class MainStickerField extends Component {
         this.setState({description: newArgument})
         break
       default:
-        this.setState({color: '#FFF6CS'})
+        this.setState({color: '#fff6cs'})
         break
     }
     /*
