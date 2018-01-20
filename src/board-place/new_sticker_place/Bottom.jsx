@@ -29,7 +29,6 @@ class NewStickerButton extends Component {
             onClickClose={this.handleClick}
             onClickPlus = {this.props.onClickPlus}
           />
-
         </div>
       </Modal>
     ) : null

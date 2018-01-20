@@ -7,6 +7,7 @@ import UserList from './UserList'
 import ButtonCheckDivs from './ShowHideBlock'
 import ShowHideColor from './ShowHideColor'
 import Person from './PersonDiv'
+
 class ButtonCheckDiv extends Component {
   render () {
     return (
@@ -18,37 +19,34 @@ class ButtonCheckDiv extends Component {
     )
   }
 }
-class AddUSer extends Component{
-  render()
-  {
-    return(
+class AddUSer extends Component {
+  render () {
+    return (
       <button id = "GetUsersList" className = 'CurcleButton'>
-      <img src="./button_img/add-user-button.png" id="AddUser" alt="AddUser"/>
+        <img src="./button_img/add-user-button.png" id="AddUser" alt="AddUser"/>
       </button>
-    );
+    )
   }
 }
 
-class RemoveStic extends Component{
-  render()
-  {
-    return(
-        <button id = "RemoveSticker" className = 'CurcleButton'>
+class RemoveStic extends Component {
+  render () {
+    return (
+      <button id = "RemoveSticker" className = 'CurcleButton'>
         <img src="./button_img/rubbish-bin.png" id="RemoveStic" alt="RemoveSticker"/>
-        </button>
-    );
+      </button>
+    )
   }
 }
-
 
 class ButtonUsersDiv extends Component {
   render () {
     return (
 
       <div id = 'ButtonUsersDiv'>
-     
-      <ShowHideColor/>
-      <RemoveStic/>
+
+        <ShowHideColor/>
+        <RemoveStic/>
       </div>
     )
   }
@@ -59,12 +57,12 @@ class BigSticker extends Component {
     return (
       <div id = 'BigSticker'>
         <ButtonCheckDivs/>
-        
+
         <MainStickerField
           onClickClose = {this.props.onClickClose}
           onClickPlus = {this.props.onClickPlus}
         />
-         
+
         <ButtonUsersDiv/>
       </div>
     )

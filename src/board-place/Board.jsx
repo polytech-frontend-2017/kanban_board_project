@@ -87,7 +87,7 @@ class Board extends Component {
         </div>
         <Bottom
           cards={this.state.cards.filter((card) => card.status === 'start')}
-          onClickPlus={this.addCard}
+          onClickPlus = {this.addCard}
         />
       </div>
     )

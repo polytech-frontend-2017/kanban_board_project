@@ -11,7 +11,7 @@ class App extends Component {
         <Board/>
       </div>
     )
-  };
+  }
 }
 
 export default App
