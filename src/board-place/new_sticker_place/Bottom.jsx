@@ -52,6 +52,7 @@ class Bottom extends Component {
     return (
       <div id = "bottom">
         <NewStickerButton
+          tabindex="1"
           onClickPlus = {this.props.onClickPlus}
         />
       </div>

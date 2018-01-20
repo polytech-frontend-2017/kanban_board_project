@@ -111,7 +111,6 @@ class Board extends Component {
     // получаем id поля
     let card = this.state.cards[cardIndex]
     // если не в текущем компоненте
-    // if (card.status !== listId ) {
     // обновление статуса у стикера
     this.setState(update(this.state, {
       cards: {
@@ -119,7 +118,7 @@ class Board extends Component {
           status: {$set: listId}
         }
       }
-    }))// }
+    }))
   }
 
   componentDidMount () {
@@ -140,6 +139,10 @@ class Board extends Component {
           cards: cardArray
         })
         console.info(this.state.cards)
+      })
+      .catch((err) => {
+        alert('Connection server problem!')
+        console.warn(err)  
       })
   }
 

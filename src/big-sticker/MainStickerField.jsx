@@ -50,6 +50,7 @@ class StickerDiscription extends Component {
         <textarea
           id = "TArea"
           placeholder="Text description on this sticker"
+          maxLength="201"
           required
           onChange = {this.handleChangeDescription}>
         </textarea>
@@ -81,6 +82,7 @@ class StickerHead extends Component {
           autoFocus="autofocus"
           type = "text"
           id = "StickerName"
+          maxLength="21"
           onChange = {this.handleChangeTitle}
           placeholder="Input a card name"
           required
