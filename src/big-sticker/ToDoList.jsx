@@ -1,8 +1,9 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import axios from 'axios'
-import './BSticker.css'
+import './style/BSticker.css'
 import ButtonCheckDiv from './ShowHideBlock'
+console.clear()
 
 const TodoForm = ({addTodo}) => {
   // Input Tracker
@@ -13,7 +14,7 @@ const TodoForm = ({addTodo}) => {
       e.preventDefault()
       addTodo(input.value)
       input.value = ''
-    }}>
+      }}>
       <input className="form-control col-md-12" ref={node => {
         input = node
       }} />

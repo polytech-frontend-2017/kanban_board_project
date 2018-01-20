@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import './ShowHideColor.css'
+import './style/ShowHideColor.css'
 //import Color from './'
 
  class Color extends Component{
@@ -12,7 +12,7 @@ import './ShowHideColor.css'
         this.state={isColor:false};
     }
 
-    OnColor(){
+    OnColor(e){
         this.setState({isColor:true});
     }
 
@@ -36,9 +36,8 @@ import './ShowHideColor.css'
 
         return(
             <div id="ColorDiv">
-            {button}
-            <Indicator isColor={isColor}/>
-            
+                {button}
+                <Indicator isColor={isColor}/>
             </div>
         );
     }
@@ -48,34 +47,39 @@ function Showm(props) {
     return  (
      
         <div className="showColor">
-          <button class="button" id="green" ></button>
-          <button class="button" id="pink"></button>
-          <button class="button" id="yelluw"></button>
-       
+          <button className="button" id="green" ></button>
+          <button className="button" id="pink"></button>
+          <button className="button" id="yelluw"></button>
       </div>)
   }
   
   function Hidem(props) {
-    return ( <div  ></div>)
+    return ( <div></div>)
   }
   
   function Indicator(props) {
     const isColor = props.isColor;
     if(isColor){
-      return <Showm />;
+        return <Showm />;
     }
-    return <Hidem />;
+        return <Hidem />;
   }
   function Show(props)
 {
-    return(<div ><button id="ChangeColour" className = 'CurcleButton' onClick={props.onClick}>
-     <img src="./button_img/paint-bucket.png" id="PaintBucket" alt="PaintBucket"/>
-     </button></div>);
+    return(
+    <div >
+        <button id="ChangeColour" className = 'CurcleButton' onClick={props.onClick}>
+            <img src="./button_img/paint-bucket.png" id="PaintBucket" alt="PaintBucket"/>
+        </button>
+     </div>);
 }
 function Hide(props)
 {
-    return(<div ><button id="ChangeColour" className = 'CurcleButton' onClick={props.onClick}> 
-    <img src="./button_img/paint-bucket.png" id="PaintBucket" alt="PaintBucket"/>
-    </button></div>);
+    return(
+    <div >
+        <button id="ChangeColour" className = 'CurcleButton' onClick={props.onClick}> 
+            <img src="./button_img/paint-bucket.png" id="PaintBucket" alt="PaintBucket"/>
+        </button>
+    </div>);
 }
   export default Color;

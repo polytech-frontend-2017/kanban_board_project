@@ -70,3 +70,4 @@ function HidePersonBlock (props) {
   )
 }
 export default Person
+

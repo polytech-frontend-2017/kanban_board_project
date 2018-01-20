@@ -20,7 +20,7 @@ class Header extends Component {
         <ProjectButton/>
       </header>
     )
-  }
+  };
 }
 
 export default Header
