@@ -3,7 +3,6 @@ import Modal from '../../modal/Modal'
 import BigSticker from '../../big-sticker/BSticker'
 import './Bottom.css'
 
-
 class NewStickerButton extends Component {
   constructor (props) {
     super(props)
@@ -50,10 +49,10 @@ class NewStickerButton extends Component {
 
 class Bottom extends Component {
   render () {
-   return (
+    return (
       <div id = "bottom">
         <NewStickerButton
-        onClickPlus = {this.props.onClickPlus}
+          onClickPlus = {this.props.onClickPlus}
         />
       </div>
     )

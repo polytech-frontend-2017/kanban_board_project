@@ -4,22 +4,21 @@ import PropTypes from 'prop-types'
 import { DropTarget } from 'react-dnd'
 
 const listTargetSpec = {
-  hover(props, monitor) {
-    const draggedId = monitor.getItem().id;
-    props.cardCallbacks.updateStatus(draggedId, props.id);
-    }
-};
+  hover (props, monitor) {
+    const draggedId = monitor.getItem().id
+    props.cardCallbacks.updateStatus(draggedId, props.id)
+  }
+}
 
-function collect(connect, monitor) {
+function collect (connect, monitor) {
   return {
     connectDropTarget: connect.dropTarget()
-  };
+  }
 }
-     
 
 class ListComponent extends Component {
-  
-  render () {const { connectDropTarget } = this.props
+  render () {
+    const { connectDropTarget } = this.props
     let cards = this.props.cards.map((card) => {
       return (
         <Card
@@ -32,7 +31,6 @@ class ListComponent extends Component {
         />
       )
     })
-   
 
     let columnTitle
     if (this.props.id !== 'start') {

@@ -14,7 +14,7 @@ const TodoForm = ({addTodo}) => {
       e.preventDefault()
       addTodo(input.value)
       input.value = ''
-      }}>
+    }}>
       <input className="form-control col-md-12" ref={node => {
         input = node
       }} />
@@ -83,13 +83,13 @@ class TodoApp extends React.Component {
         this.setState({data: remainder})
       })
   }
-/*
+  /*
 //внутри туду
   <TodoForm addTodo={this.addTodo.bind(this)}/>
         <TodoList
           todos={this.state.data}
           remove={this.handleRemove.bind(this)}
-        />*/
+        /> */
   render () {
     // Render JSX
     return (
@@ -98,6 +98,5 @@ class TodoApp extends React.Component {
     )
   }
 }
-
 
 export default TodoApp

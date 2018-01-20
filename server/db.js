@@ -5,27 +5,7 @@ const bcrypt = require('bcrypt')
 var dateFormat = require('dateformat')
 
 const db = pgp(src.cn)
-/*
-bcrypt.hash('admin', 10, (err, hash) => {
-  console.info(hash)
-  console.info(err)
-  db.none('INSERT INTO "Users"("Login", "Password") VALUES($1, $2)', ['admin', hash])
-    .then(() => {
-      console.info('success')
-    })
-    .catch((error) => {
-      console.info('not success ' + error)
-    })
-})
 
-db.any('SELECT * FROM "Users"', [true])
-  .then(function (data) {
-    console.info(data)
-  })
-  .catch(function (error) {
-    console.info('not success ' + error)
-  })
-*/
 function createProject (userId = 5, projectName = 'start_project') {
   db.none('INSERT INTO "Project"("User_id", "Project_name") VALUES($1, $2)', [userId, projectName])
     .then(() => {
@@ -111,6 +91,3 @@ module.exports = {
     return result
   }
 }
-
-// updateSticker(card.status, card.title, card.desc, card.date, card.colour)
-// selectStickers()

@@ -1,26 +1,26 @@
 import React, { Component } from 'react'
 import List from './TaskForm'
 class ButtonCheckDivs extends Component {
-  constructor(props) {
-    super(props);
-    this.onBlock = this.onBlock.bind(this);
-    this.offBlock = this.offBlock.bind(this);
-    this.state = {IsShow: false};
+  constructor (props) {
+    super(props)
+    this.onBlock = this.onBlock.bind(this)
+    this.offBlock = this.offBlock.bind(this)
+    this.state = {IsShow: false}
   }
-  
-  onBlock() {
-    this.setState({IsShow: true});
+
+  onBlock () {
+    this.setState({IsShow: true})
   }
-  
-  offBlock() {
-    this.setState({IsShow: false});
+
+  offBlock () {
+    this.setState({IsShow: false})
   }
   render () {
-    const IsShow = this.state.IsShow;
-    let button = null;
-    if(IsShow){
-      button = <Hide  onClick={this.offBlock} /> 
-    } 
+    const IsShow = this.state.IsShow
+    let button = null
+    if (IsShow) {
+      button = <Hide onClick={this.offBlock} />
+    }
     else {
       button = <Show onClick={this.onBlock} />
     }
@@ -29,46 +29,46 @@ class ButtonCheckDivs extends Component {
         <Indicator IsShow={IsShow} />
         {button}
       </div>
-     )
+    )
   }
 }
-function Showm(props) {
-  return  (
-  <div id = 'TaskList'>
-    <div id="task">
-     <List />
-    </div>
-  </div>
-  );
-}
-
-function Hidem(props) {
-  return ( <div id = 'TaskLists' ></div>);
-}
-
-function Indicator(props) {
-  const IsShow = props.IsShow;
-  if(IsShow){
-    return <Showm />;
-  }
-    return <Hidem />;
-}
-function Show(props) {
+function Showm (props) {
   return (
-  <div id="show">
-    <button id="GetCheckList" className = 'CurcleButton' onClick={props.onClick}>
-      <img src="./button_img/list.png" id="GetCheckListImg" alt="checkedList"/>
-    </button>
-  </div>);
+    <div id = 'TaskList'>
+      <div id="task">
+        <List />
+      </div>
+    </div>
+  )
 }
 
-function Hide(props) {
+function Hidem (props) {
+  return (<div id = 'TaskLists' ></div>)
+}
+
+function Indicator (props) {
+  const IsShow = props.IsShow
+  if (IsShow) {
+    return <Showm />
+  }
+  return <Hidem />
+}
+function Show (props) {
+  return (
+    <div id="show">
+      <button id="GetCheckList" className = 'CurcleButton' onClick={props.onClick}>
+        <img src="./button_img/list.png" id="GetCheckListImg" alt="checkedList"/>
+      </button>
+    </div>)
+}
+
+function Hide (props) {
   return (
     <div id="hide">
-      <button id="GetCheckList" className = 'CurcleButton' onClick={props.onClick}> 
+      <button id="GetCheckList" className = 'CurcleButton' onClick={props.onClick}>
         <img src="./button_img/list.png" id="GetCheckListImg" alt="checkedList"/>
       </button>
     </div>
-  );
+  )
 }
-  export default ButtonCheckDivs;
+export default ButtonCheckDivs

@@ -69,5 +69,5 @@ function HidePersonBlock (props) {
     </div>
   )
 }
-export default Person
 
+export default Person

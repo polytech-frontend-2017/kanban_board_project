@@ -22,13 +22,12 @@
     height: 80vh;
     background-color: #ffffff;
     border:1pt solid #000000;
-    -webkit-border-top-right-radius: 2px;
-    -webkit-border-bottom-right-radius: 2px;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
     -moz-border-radius-topright: 2px;
     -moz-border-radius-bottomright: 2px;
     border-top-right-radius: 2px;
     border-bottom-right-radius: 2px;
-    -webkit-animation:fade ease-in 1s; 
     -moz-animation:fade ease-in 1s;
     animation:fade ease-in 0.75s; 
     /* Не уверенна что это законно!*/
