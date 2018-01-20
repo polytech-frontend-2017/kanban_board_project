@@ -13,8 +13,7 @@
     background-color: green;
 }
 
-#TaskList
-{
+#TaskList {
     overflow-y: scroll;
     -ms-flex-item-align: end;
     align-self: flex-end;
